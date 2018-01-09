@@ -12,21 +12,27 @@ import javax.servlet.ServletResponse;
 public class MyFilter implements Filter {
 
 	@Override
-	public void destroy() {
-		// TODO Auto-generated method stub
+	public void init(FilterConfig filterConfig) throws ServletException {
+		String testParam = filterConfig.getInitParameter("testParam");
 
+		System.out.println("Test Parameter --> " + testParam);
 	}
 
 	@Override
-	public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain)
 			throws IOException, ServletException {
-		// TODO Auto-generated method stub
-
+		String host = request.getRemoteHost();
+		int port = request.getRemotePort();
+		
+		System.out.println("Host === "+host);
+		System.out.println("Port == "+port);
+		
+		filterChain.doFilter(request, response);
 	}
 
 	@Override
-	public void init(FilterConfig arg0) throws ServletException {
-		
+	public void destroy() {
+
 	}
 
 }
