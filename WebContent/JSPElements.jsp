@@ -12,6 +12,9 @@
 	<%@ page import = "java.util.*"%>
 
 	<%!int a = 10;
+	
+	
+	<!-- file modified -->
 	int b = 20;
 
 	int c = Integer.max(a, b);%>
