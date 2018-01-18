@@ -4,20 +4,23 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>JSP Elements</title>
 </head>
-<body>
-	<%
-		out.println("Hi " + request.getRemoteAddr());
-	%>
 
-	<form action="ImplicitObjects.jsp">
-		<input type="submit" value="Open implicitObjects.jsp">
-	</form>
+<body>
+	<%@ include file="header.jsp" %>
+	<%@ page import = "java.util.*"%>
+
+	<%!int a = 10;
+	int b = 20;
+
+	int c = Integer.max(a, b);%>
+
+	<%
+		out.println("Max of A & B is : "+c);	
+	%>
 	
-	<form action="JSPElements.jsp">
-		<input type="submit" value="Open JSPElements.jsp">
-	</form>
+	<%@ include file="footer.jsp" %>
 
 </body>
 </html>

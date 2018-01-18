@@ -4,20 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Header</title>
 </head>
 <body>
-	<%
-		out.println("Hi " + request.getRemoteAddr());
-	%>
-
-	<form action="ImplicitObjects.jsp">
-		<input type="submit" value="Open implicitObjects.jsp">
-	</form>
-	
-	<form action="JSPElements.jsp">
-		<input type="submit" value="Open JSPElements.jsp">
-	</form>
-
+	<h1>Header</h1>
 </body>
 </html>
